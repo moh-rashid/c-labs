@@ -1,0 +1,156 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf500
+{\fonttbl\f0\froman\fcharset0 TimesNewRomanPS-BoldMT;\f1\froman\fcharset0 TimesNewRomanPSMT;\f2\fmodern\fcharset0 CourierNewPSMT;
+\f3\ftech\fcharset77 Symbol;\f4\fnil\fcharset0 TrebuchetMS;\f5\fswiss\fcharset0 Helvetica;
+}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c0\c0\c100000;}
+{\info
+{\author birdb}}\margl1440\margr1440\viewkind1
+\deftab720
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\b\fs27 \cf0 Playing Card C++ Class
+\f1\b0\fs24 \
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\b \cf0 Playing card class
+\f1\b0 \
+As we go through the term, we will be developing an application for playing blackjack. Blackjack, of course, uses a normal deck of cards, so we will have to create a card deck. A deck of cards, of course, is composed of playing cards, so we will have to develop a class for a playing card. That's what this assignment is all about.\
+Cards have a value and a suit. We will use one character to specify the value of a card and one character to specify the suit of a card. The characters we use will be as follows:\
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrt\brdrs\brdrw10\brdrcf0 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+
+\f0\b \cf0 Values\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 Suits\cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+
+\f1\b0 \cf0 A for an ace\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 C for clubs \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 digits 2 through 9 for their corresponding cards\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 D for diamonds \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 T for a ten\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 S for spades \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 J for a jack\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 H for hearts \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 Q for a queen\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 \cell \row
+
+\itap1\trowd \taflags1 \trgaph108\trleft-108 \trbrdrl\brdrs\brdrw10\brdrcf0 \trbrdrb\brdrs\brdrw10\brdrcf0 \trbrdrr\brdrs\brdrw10\brdrcf0 
+\clvertalt \clshdrawnil \clwWidth3936\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx4320
+\clvertalt \clshdrawnil \clwWidth3642\clftsWidth3 \clbrdrt\brdrs\brdrw10\brdrcf0 \clbrdrl\brdrs\brdrw10\brdrcf0 \clbrdrb\brdrs\brdrw10\brdrcf0 \clbrdrr\brdrs\brdrw10\brdrcf0 \clpadl100 \clpadr100 \gaph\cellx8640
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 K for a king\cell 
+\pard\intbl\itap1\pardeftab720\li360\ri0\sb100\sa100\partightenfactor0
+\cf0 \cell \lastrow\row
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 If you wish, you can add the capability for the two jokers to the card class. The value for a joker will be 'Z', and the suit can be either 'R' or 'B' for red or black respectively.\
+If you add the joker capability, be sure that you don't allow the user to create a card with a wrong combination of suit and value. For instance, QB for "queen of black", or ZD for "joker of diamonds" would both be invalid. \
+A whole deck would be:\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f2 \cf0 AC 2C 3C 4C 5C 6C 7C 8C 9C TC JC QC KC\uc0\u8232 AH 2H 3H 4H 5H 6H 7H 8H 9H TH JH QH KH\u8232 AD 2D 3D 4D 5D 6D 7D 8D 9D TD JD QD KD\u8232 AS 2S 3S 4S 5S 6S 7S 8S 9S TS JS QS KS\u8232 ZB ZR
+\f1 \
+Any other cards would be illegal.\
+The only time your class should contain an invalid card is when the default constructor is used. The default constructor does not take values for the card value and the card suit. When the default constructor is used, the value and suit should both be '0'.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\b \cf0 Implementation
+\f1\b0 \
+You will create a header file and a cpp for the class declaration and definition. The class will be PlayingCard, the header file will be PlayingCard.h, and the source file will be PlayingCard.cpp\
+You must produce the public member functions outlined below and as described below. How you develop the private member variables and functions is up to you. But, you should do it clearly and efficiently.\
+You may choose to write your own driver for development and testing, but use the one I provide for the final test and submission to moodle. When your class is developed, your project should consist of the following files:\
+\pard\tx720\pardeftab720\li720\fi-360\ri0\sb100\sa100\partightenfactor0
+
+\f3\fs20 \cf0 \'a5	
+\f1\fs24 PlayingCard.h \
+\pard\pardeftab720\li720\fi-360\ri0\sb100\sa100\partightenfactor0
+
+\f3\fs20 \cf0 \'a5	
+\f1\fs24 PlayingCard.cpp \
+
+\f3\fs20 \'a5	
+\f1\fs24 PlayingCardTest.cpp \
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+\cf0 PlayingCardTest.cpp will be the driver I supply for you to use in testing. It is available on moodle. You may add to PlayingCardTest.cpp as long as it still contains all the original tests.\
+PlayingCardTest.cpp uses both arrays and pointers, so some of the code in it may seem alien. If you have created your class as outlined in the assignment, you won't need to make any modifications for it to work with PlayingCardTest.cpp.\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f0\b \cf0 Public member functions
+\f1\b0 \uc0\u8232 The public member functions will be as follows:\
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f4 \cf0 PlayingCard()
+\f1\fs20 \uc0\u8232 
+\fs24 Default constructor, sets value to '0', sets suit to '0'
+\fs20 \
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\fs24 \cf0 PlayingCard(
+\f4 \cf2 char\cf0  myValue, \cf2 char\cf0  mySuit)
+\f1  
+\fs20 \uc0\u8232 
+\fs24 Overloaded constructor, checks for valid myValue and mySuit. If they are valid it sets value and suit to those values. If either of them is not valid, it sets them both to '0'.
+\fs20 \
+\pard\pardeftab720\ri0\sb100\sa100\partightenfactor0
+
+\f4\fs24 \cf2 bool\cf0  setCard(\cf2 char\cf0  myValue, \cf2 char\cf0  mySuit)
+\f1\fs20 \uc0\u8232 
+\fs24 Checks for valid myValue and mySuit. If they are valid it sets value and suit to those values. If either of them is not valid, it returns false and does not change any values.
+\fs20 \
+
+\f4\fs24 \cf2 char\cf0  getValue()
+\f1\fs20 \uc0\u8232 
+\fs24 Returns the card's value, one of A23456789TJQK (and Z if you are doing jokers).
+\fs20 \
+
+\f4\fs24 \cf2 char\cf0  getSuit() 
+\f1\fs20 \uc0\u8232 
+\fs24 Returns the card's suit, one of CHDS (and BR if you are doing jokers).
+\fs20 \
+
+\f4\fs24 \cf2 string \cf0 getCardCode()
+\f1\fs20 \uc0\u8232 
+\fs24 Returns a string containing the 2 characters associated with the card. For example for the 7 of spades it would return the string "7S". It does not include any spaces.
+\fs20 \
+
+\f4\fs24 \cf2 bool\cf0  isValid()
+\f1\fs20 \uc0\u8232 
+\fs24 Returns true if the card is a valid card, false if it is not.
+\fs20 \
+\pard\pardeftab720\ri0\sl276\slmult1\sa200\partightenfactor0
+
+\f5\fs22 \cf0 \
+}
